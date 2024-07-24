@@ -7,9 +7,33 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="icon" href="./assets/logo.svg">
 </head>
-<body style="background-color: #c3c2c0; margin-top: 10px;">
-  <div class="container p-4 bg-white rounded-3">
-    <div id="carouselHome" class="carousel slide">
+<body class="bg-secondary-subtle">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Let Menu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cardápio</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisa" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="submit">
+            <img src="./assets/search.svg" alt="">
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="container p-4 bg-white rounded-3 text-center">
+    <div id="carouselHome" class="carousel slide carousel-fade mb-4">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -17,21 +41,21 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./assets/carousel/lunch.jpg" class="d-block w-100" alt="dinner table">
+          <img src="./assets/carousel/lunch.jpg" class="d-block w-100 rounded-3" alt="dinner table">
           <div class="carousel-caption d-none d-md-block">
             <h5>Jantares</h5>
             <p>Comida saborosa para todos os gostos e ocasiões.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./assets/carousel/petit.jpg" class="d-block w-100" alt="...">
+          <img src="./assets/carousel/petit.jpg" class="d-block w-100 rounded-3" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Sobremesas</h5>
             <p>Deliciosas sobremesas para serem desfrutadas depois de uma deliciosa refeição.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./assets/carousel/potato.jpg" class="d-block w-100" alt="...">
+          <img src="./assets/carousel/potato.jpg" class="d-block w-100 rounded-3" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Quitutes</h5>
             <p>Pratos pequenos e gostosos.</p>
