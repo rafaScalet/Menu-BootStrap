@@ -1,3 +1,10 @@
+const myModal = document.getElementById('modal')
+const myInput = document.getElementById('calcular')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+
 const prods = [
   {id: 1, name: "Bife com batata frita", price: 30.00},
   {id: 2, name: "Coxa de frango crocante", price: 25.00},
@@ -16,13 +23,15 @@ function calc () {
   const personName = document.getElementById('name').value;
   const quantities = document.getElementsByName('quantity');
 
-  let output = document.getElementById('output');
+  let outputHeader = document.getElementById('output-header');
+  let outputBody = document.getElementById('output-body');
+  let outputFooter = document.getElementById('output-footer');
   let result = 0;
 
-  output.innerHTML = `Caro <strong>${personName}</strong></br></br></br>`;
-  output.innerHTML += 'Seguem os dados do seu pedido</br></br>';
-  output.innerHTML += 'O seu pedido é: </br>';
-  output.innerHTML += `<ul>`;
+  outputHeader.innerHTML = `Caro <strong>${personName}</strong></br></br></br>`;
+  outputBody.innerHTML += 'Seguem os dados do seu pedido</br></br>';
+  outputBody.innerHTML += 'O seu pedido é: </br>';
+  outputBody.innerHTML += `<ul>`;
 
   for (let input of quantities) {
       if (input.value == 0) {
@@ -33,12 +42,12 @@ function calc () {
       let total = prods[id - 1].price * input.value;
 
       const msg = `Prato: ${prods[id - 1].name} - Preço unitário: ${formatter.format(prods[id - 1].price)} - Quantidade: ${input.value} - Total: ${formatter.format(total)}</br>`;
-      output.innerHTML += `<li>${msg}</li>`;
+      outputBody.innerHTML += `<li>${msg}</li>`;
 
       result += total;
 
   }
 
-  output.innerHTML += `</ul>`;
-  output.innerHTML += `</br><h4>Preço final: ${formatter.format(result)}</h4>`;
+  outputBody.innerHTML += `</ul>`;
+  outputBody.innerHTML += `<h4>Preço final: ${formatter.format(result)}</h4>`;
 }
