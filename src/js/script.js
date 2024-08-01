@@ -25,10 +25,10 @@ function calc () {
 
   let outputHeader = document.getElementById('output-header');
   let outputBody = document.getElementById('output-body');
-  let outputFooter = document.getElementById('output-footer');
   let result = 0;
 
-  outputHeader.innerHTML = `Caro <strong>${personName}</strong></br></br></br>`;
+  outputHeader.innerHTML = `Caro <strong>${personName}</strong>`;
+  outputBody.innerHTML = '';
   outputBody.innerHTML += 'Seguem os dados do seu pedido</br></br>';
   outputBody.innerHTML += 'O seu pedido é: </br>';
   outputBody.innerHTML += `<ul>`;
